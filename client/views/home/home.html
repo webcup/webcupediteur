@@ -1,0 +1,22 @@
+<template name="Home">
+	<div class="page-container container-fluid" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HomeEditor}}
+	</div>
+</template>
+
+<template name="HomeEditor">
+	<div class="row row-editor">
+		<div class="col-md-6">
+			{{> CodeMirror id="markdown-editor" options=editorOptions reactiveVar="editorText"}}
+		</div>
+		<div class="col-md-6 full-height">
+{{{editorText}}}
+		</div>
+	</div>
+</template>
